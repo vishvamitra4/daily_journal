@@ -1,0 +1,11 @@
+<% include partials/header.ejs%>
+<h1>Hello world!</h1>
+<p><%=homeStartingContent%></p>
+
+<%arr.forEach(function(element){%>
+  <h1><%=element.nt%></h1>
+  <% let truncateString = element.np.substring(0 , 100) %>
+  <p><%=truncateString%>........<a href="/posts/<%=element.nt%>">Read More</a></p>
+<%}) %>
+
+<% include partials/footer.ejs%>
